@@ -1,0 +1,66 @@
+@media (max-width: 1200px){
+  .sidebar{
+    position: fixed;
+    left:0;
+    bottom:0;
+    top: 55px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+    cursor: pointer;
+  }
+  .sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .sidebar-link:hover{
+    background-color: rgb(235,235,235);
+  }
+  /* Another way to target in css this will target all the img elements inside sidebar-links class */
+  .sidebar-link img{
+    height: 20px;
+    margin-right: 4px;
+  }
+  .sidebar-link div{
+    font-size: 10px;
+  }
+}
+@media (min-width: 1200px){
+  .sidebar{
+    position: fixed;
+    left:0;
+    bottom:0;
+    top: 55px;
+    background-color: white;
+    width: 200px;
+    z-index: 200;
+    padding-top: 5px;
+    cursor: pointer;
+  }
+  .sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 16px;
+  }
+  .sidebar-link:hover{
+    background-color: rgb(235,235,235);
+  }
+  
+  .sidebar-link img{
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+  .sidebar-link div{
+    margin-left: 10;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

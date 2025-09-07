@@ -1,0 +1,162 @@
+.search-bar{
+  /*NOT NEEDED AS WE ARE GOING TO USE DIVS NOW display: block; /*by default input is an inline element, so it will not take the entire width*/
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;  
+  border: 1px solid rgb(192,192,192);
+  border-radius: 2px;
+  width: 0px; /*to make the search bar shrinkable*/
+  box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05); /*to give some depth to the search bar*/
+}
+.search-bar::placeholder{ /*to style the placeholder text*/  
+  font-size: 16px;
+}
+.header{
+  height: 55px;
+  display: flex; /*to make the three sections horizontal*/
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /*to make sure the header is on top of other elements
+  otherwise thumbnail wouldve been on top being relative and text being static below header when we scrolled*/
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(230,230,230);
+}
+.left{
+  align-items: center;
+  display: flex;
+}
+.middle{
+  flex: 1; 
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+.right{
+  margin-right: 20px;
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0; /*to prevent the right section from shrinking when the screen size is reduced only search bar shrinks*/
+}
+.ham-menu{
+  height: 24px;
+  cursor: pointer; 
+  margin-left: 24px;
+  margin-right: 20px;
+}
+.yt-logo{
+  height: 25px;
+  cursor: pointer; 
+}
+.search-button{
+  height: 36px;
+  width: 66px;
+  background-color: rgb(240,240,240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192,192,192);
+  margin-left:-1px;
+  margin-right: 10px;
+  cursor: pointer; 
+}
+.search-button, 
+.mic-button, 
+.upload-icon-container,
+.apps-container,
+.notifications-icon-container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-button .tooltip, 
+.mic-button .tooltip, 
+.upload-icon-container .tooltip,
+.apps-container .tooltip,
+.notifications-icon-container .tooltip
+{
+  font-size: 12px;
+  font-family: Roboto, Arial ;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap; /*to prevent the tooltip from breaking into multiple lines*/
+  pointer-events: none; /*to make sure the tooltip does not interfere with hover of search button*/
+}
+/* combo of pseudo class and adv css selector */
+.search-button:hover .tooltip, 
+.mic-button:hover .tooltip,  
+.upload-icon-container:hover .tooltip,
+.apps-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip{
+  opacity: 1;
+}
+
+.mic-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer; 
+}
+.search-icon{
+  height: 25px;
+  background-color: rgb(240,240,240);
+  padding-bottom: 4px;
+}
+.mic-icon{
+  height: 24px;
+}
+.create-icon{
+  height: 24px;
+  cursor: pointer; 
+}
+.apps-icon{
+  height: 24px;
+  cursor: pointer; 
+}
+.bell-icon{
+  height: 24px;
+  cursor: pointer; 
+}
+.user-picture{
+  height: 32px;
+  border-radius: 16px; 
+  cursor: pointer; 
+}
+.notifications-icon-container{
+  position: relative;
+  cursor: pointer;
+}
+.notification-count{
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: rgb(200,0,0);
+  color: white;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px; 
+  font-family: Roboto, Arial;
+}
